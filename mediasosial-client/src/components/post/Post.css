@@ -1,0 +1,54 @@
+.commentNLike{
+   font-size: 12px;
+}
+.commentB{
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    margin: 0px 5px 0px 5px; 
+}
+.likeB{
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    margin: 0px 5px 0px 5px; 
+}
+
+
+.postprofile-pic{
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-left: 15px;
+    margin-right: 0px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow:
+    /* logo shadow */
+    0px 0px 2px #5f5f5f,
+    /* offset */
+    0px 0px 0px 5px #ecf0f3,
+    /* bottom right */
+    4px 4px 18px #a7aaaf,
+    /* top left */
+    -8px -8px 5px #ffffff; 
+
+}
+
+.commentBox{
+    outline:none;
+    /* transform: translateX(-105%); */
+    margin-top: 8px;
+    margin-right: 5px;
+    position: relative;
+    background: rgb(207, 253, 228);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 20px;
+    color: grey;
+    box-shadow: inset 2px 2px 5px #cdced1, 
+                 inset -5px -5px 10px #ffffff;
+} 

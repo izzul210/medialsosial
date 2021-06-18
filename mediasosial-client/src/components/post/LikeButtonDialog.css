@@ -1,0 +1,66 @@
+.icheckbox input[type="checkbox"]{
+    height: 40px;
+    width: 40px;
+    -webkit-appearance: none;
+    display: inline-flex;
+    justify-content: center;
+    margin-right: 7px;
+    margin-top: 10px;
+    outline: none;
+}
+
+
+.icheckbox input[type="checkbox"]:after{
+    font-family: FontAwesome;
+    content: '\f164';
+    color: #7a7a7a;
+    font-size: 20px;
+}
+
+.icheckbox2 input[type="checkbox"]{
+    height: 40px;
+    width: 40px;
+    -webkit-appearance: none;
+    display: inline-flex;
+    justify-content: center;
+    margin-right: 7px;
+    margin-top: 10px;
+    background-color: rgb(232, 211, 233);
+}
+
+
+.icheckbox2 input[type="checkbox"]:after{
+    font-family: FontAwesome;
+    content: '\f004';
+    color: #d31818;
+    font-size: 20px;
+}
+
+.fa-lightbulb{
+    color: green;
+}
+
+
+.unliked{
+    box-shadow:
+    -5px -5px 2px rgba(255,255,255,0.5),
+    5px 5px 10px rgba(70,70,70,0.12);
+    position: relative;
+    border-radius: 50%;
+    outline: none;
+    align-items: center;
+}
+
+.liked{
+    box-shadow:
+    -5px -5px 2px rgba(255, 255, 255, 0.5),
+    1px 1px 10px rgba(70,70,70,0.12),
+    inset -1px -1px 1px rgba(255,255,255,0.5),
+    inset  2px 2px 5px rgba(255, 251, 251, 0.12);
+    position: relative;
+    border-radius: 50%;
+    outline: none;
+    align-items: center;
+}
+
+

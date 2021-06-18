@@ -1,0 +1,85 @@
+.commentField{
+    padding: 1px 0px 1px 0px;
+    text-align: left;
+    display:flex;
+    margin-left: 15px;
+}
+
+.commentField input{
+    border: none;
+    outline: none;
+    left: 2%;
+    background: rgb(255, 255, 255);
+    font-size: 18px;
+    color: #555;
+    border-radius: 25px;
+    width: 85%;
+    padding-left: 9px;
+    padding-right: 9%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
+    box-shadow: inset 2px 2px 5px #cdced1, 
+                inset -5px -5px 10px #ffffff;
+}
+
+.commentField button{
+    outline:none;
+    position: relative;
+    left: 83%;
+    transform: translateY(-125%);
+    background: rgb(207, 253, 228);
+    border: none;
+    width: 12%;
+    height: 28px;
+    border-radius: 25px;
+    box-shadow: 1px 1px 4px #cdced1, 
+                -2px -2px 5px #ffffff;
+
+}
+
+.commentField img{
+    position: relative;
+    left: 0%;
+    transform: translateY(35%);
+    object-fit: cover;
+    background: none;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    box-shadow: 1px 1px 4px #cdced1, 
+                -2px -2px 5px #ffffff;
+
+} 
+
+.commentField button:hover i{
+    color: rgb(255, 140, 140);
+}
+
+.commentField i{
+    color: rgb(96, 146, 84);
+    size: 100px;
+}
+
+.commentField button:hover{
+    box-shadow: inset 1px 1px 6px #cdced1, 
+                inset -2px -2px 5px #ffffff;
+    
+
+}
+
+.profileCommentPic img{
+    position: relative;
+    left: 0%;
+    transform: translateY(25%);
+    object-fit: cover;
+    background: none;
+    border: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    box-shadow: 1px 1px 4px #cdced1, 
+                -2px -2px 5px #ffffff;
+}
+

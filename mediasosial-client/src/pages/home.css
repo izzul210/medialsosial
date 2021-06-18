@@ -1,0 +1,9 @@
+.positionLoader{
+    align-content: center;
+}
+
+@media(max-width: 850px){
+.userPresent{
+    margin-top: 175px;
+  }
+}

@@ -1,0 +1,225 @@
+.profile-div{
+    margin: auto auto;
+    width: 380px;
+    height: 500px;
+    padding: 30px 5px 5px 5px;
+    padding-bottom: 100px;
+    border-radius: 30px;
+    background: #eff4f5;
+    box-shadow: 7px 7px 15px #cdced1,
+               -5px -5px 7.5px #ffffff;
+}
+
+.nonprofile-div{
+    margin: auto auto;
+    width: 380px;
+    height: 150px;
+    padding: 30px 5px 5px 5px;
+    border-radius: 30px;
+    background: #eff4f5;
+    box-shadow: 7px 7px 15px #cdced1,
+               -5px -5px 7.5px #ffffff;
+}
+
+.profile-pic{
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    box-shadow:
+    /* logo shadow */
+    0px 0px 2px #5f5f5f,
+    /* offset */
+    0px 0px 0px 5px #ecf0f3,
+    /* bottom right */
+    10px 10px 20px #a7aaaf,
+    /* top left */
+    -15px -15px 9px #ffffff; 
+}
+
+.logout{
+    height: 50px;
+    width: 50px;
+    -webkit-appearance: none;
+    display: inline-flex;
+    justify-content: center;
+    margin: 15px 20px 15px 20px;
+    outline: none;
+    box-shadow:
+    -5px -5px 2px rgba(255,255,255,0.5),
+    5px 5px 10px rgba(70,70,70,0.12);
+    position: relative;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    align-items: center;
+    font-size: 23px;
+    color: rgb(88, 87, 87);
+    background-color:#eff4f5;
+    
+}
+
+
+.logout:hover{
+    box-shadow:
+    inset -2px -2px 2px rgba(255,255,255,0.5),
+    inset  5px 5px 10px rgba(70,70,70,0.12);
+    background-color: rgb(255, 243, 241);
+    
+}
+
+.locationInfo {
+    height: 25px;
+    width: 25px;
+    -webkit-appearance: none;
+    display: inline-flex;
+    justify-content: center;
+    margin-right: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 2px;
+    outline: none;
+    box-shadow:
+    -3px -3px 2px rgba(255,255,255,0.5),
+    3px 3px 7px rgba(70,70,70,0.12),
+    inset -3px -3px 2px rgba(255,255,255,0.5),
+    inset  5px 5px 6px rgba(70,70,70,0.12);
+    position: relative;
+    border-radius: 50%;
+    outline: none;
+    align-items: center;
+}
+
+
+.locationInfo:after{
+    font-family: FontAwesome;
+    content: '\f0ac';
+    color: #048f396c;
+    font-size: 26px;
+}
+
+.websiteInfo{
+    height: 18px;
+    width: 25px;
+    -webkit-appearance: none;
+    display: inline-flex;
+    justify-content: center;
+    margin-right: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 2px;
+    outline: none;
+    box-shadow:
+    -3px -3px 2px rgba(255,255,255,0.5),
+    3px 3px 7px rgba(70,70,70,0.12),
+    inset -3px -3px 2px rgba(255,255,255,0.5),
+    inset  5px 5px 6px rgba(70,70,70,0.12);
+    position: relative;
+    border-radius: 10%;
+    outline: none;
+    align-items: center;
+}
+
+.websiteInfo:after{
+    font-family: FontAwesome;
+    content: '\f2bb';
+    color: #047f8f71;
+    font-size: 20px;
+}
+
+.calendarInfo{
+    height: 25px;
+    width: 25px;
+    -webkit-appearance: none;
+    display: inline-flex;
+    justify-content: center;
+    margin-right: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 2px;
+    outline: none;
+    box-shadow:
+    -3px -3px 2px rgba(255,255,255,0.5),
+    3px 3px 7px rgba(70,70,70,0.12),
+    inset -3px -3px 2px rgba(255,255,255,0.5),
+    inset  5px 5px 6px rgba(70,70,70,0.12);
+    position: relative;
+    border-radius: 50%;
+    outline: none;
+    align-items: center;
+}
+
+.calendarInfo:after{
+    font-family: FontAwesome;
+    content: '\f017';
+    color: #38032063;
+    font-size: 26px;
+}
+
+.editPicture{
+    height: 35px;
+    width: 40px;
+    -webkit-appearance: none;
+    display: inline-flex;
+    justify-content: center;
+    outline: none;
+    box-shadow:
+    -2px -2px 4px rgba(255,255,255,0.5),
+    5px 5px 7px rgba(70,70,70,0.12);
+    position: relative;
+    border-radius: 15%;
+    outline: none;
+    border: none;
+    font-size: 23px;
+    color: rgb(88, 87, 87);
+    align-items: center;
+    background-color:#eff4f5;
+    
+}
+
+.editPicture:hover{
+    box-shadow:
+    inset -2px -2px 2px rgba(255,255,255,0.5),
+    inset  5px 5px 5px rgba(70,70,70,0.12);
+    background-color: rgb(255, 243, 241);    
+}
+
+.nonprofile-login, .nonprofile-signup{
+    height: 45px;
+    width: 95px;
+    -webkit-appearance: none;
+    display: inline-flex;
+    justify-content: center;
+    margin-right: 13px;
+    margin-top: 10px;
+    outline: none;
+    box-shadow:
+    -8px -8px 8px rgba(255,255,255,0.5),
+    4px 4px 4px rgba(70,70,70,0.12);
+    position: relative;
+    border-radius: 10%;
+    outline: none;
+    align-items: center;
+    flex: 1;
+    border: none;
+    background-color: none;
+}
+
+.nonprofile-signup{
+    background-color: rgb(207, 253, 228);
+}
+
+.nonprofile-login:hover
+{
+    box-shadow:
+    inset -2px -2px 2px rgba(255,255,255,0.5),
+    inset  5px 5px 10px rgba(70,70,70,0.12);
+
+}
+
+.nonprofile-signup:hover{
+    box-shadow:
+    inset -2px -2px 2px rgba(255, 255, 255, 0.5),
+    inset  5px 5px 10px rgba(70,70,70,0.12);
+}
