@@ -1,1 +1,1 @@
-# medialsosial
+# mediasosial
