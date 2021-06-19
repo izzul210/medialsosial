@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import MyButton from '../../util/MyButton';
 import PostPost from '../post/PostPost';
 import Notifications from './Notifications';
-import './Navbar.css';
+import './Navbar.scss';
 
 //MUI stuff
 import Grid from '@material-ui/core/Grid';

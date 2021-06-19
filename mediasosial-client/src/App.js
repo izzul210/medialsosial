@@ -61,32 +61,18 @@ class App extends Component {
     <MuiThemeProvider theme={theme}>
       <Provider store={store}>
         <Router >
-        <Navbar />
+          <Navbar />
           <div className="container" >
-          <Switch>
-            <Route exact path="/" component={home}/>
-            <AuthRoute 
-              exact 
-              path="/login" 
-              component={login} 
-              />
-            <AuthRoute 
-              exact 
-              path="/signup" 
-              component={signup} 
-              />
-            <Route exact 
-                  path="/users/:handle" 
-                  component={user}
-                  />
-            <Route exact
-                   path="/users/:handle/post/:postId"
-                   component={user}
-                   />
-          </Switch>
+            <Switch>
+              <Route exact path="/" component={home}/>
+              <AuthRoute exact path="/login" component={login} />
+              <AuthRoute exact path="/signup" component={signup} />
+              <Route exact path="/users/:handle" component={user} />
+              <Route exact path="/users/:handle/post/:postId" component={user}/>
+            </Switch>
           </div>
         </Router>
-        </Provider>
+      </Provider>
     </MuiThemeProvider>
   );
  }

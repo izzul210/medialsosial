@@ -27,9 +27,8 @@ export class home extends Component {
 
         return (    
             <div className={authenticated ? "userPresent" : " " } >
-                <h1>Testinggg</h1>
-              <Grid container spacing ={4}>
-                <Grid item sm={8} xs={12}>
+              <Grid container spacing ={4} >
+                <Grid item sm={8} xs={12} className="post_background">
                    {recentPostsMarkup}
                 </Grid>
                 <Grid item sm={4} xs={12}>
