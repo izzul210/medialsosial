@@ -1,10 +1,9 @@
 import React, { Component, Fragment } from 'react';
-import withStyles from '@material-ui/core/styles/withStyles';
 import {Link} from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import MyButton from '../../util/MyButton';
-import PostPost from '../post/PostPost';
+import PostButton from '../post/PostButton';
 import Notifications from './Notifications';
 import './Navbar.scss';
 
@@ -12,47 +11,28 @@ import './Navbar.scss';
 import Grid from '@material-ui/core/Grid';
 import AppBar from '@material-ui/core/AppBar';
 
-const styles = {
-    card: {
-        textAlign: 'center',
-        background: 'none',
-        margin: 'auto auto',
-        maxWidth: '520px',
-        marginBottom: '20px',
-        borderRadius: '25px',
-        boxShadow: 'inset -5px -5px 2px rgba(255,255,255,0.5), inset 5px 5px 10px rgba(70,70,70,0.12)',
-  },
-  navBartheme:{
-    maxWidth: '100%',
-    position: 'fixed',
-    backgroundColor: 'none',
-    boxShadow: '5px 5px 10px rgba(70,70,70,0.12),-5px -5px 5px rgba(255,255,255,0.5)',
-    borderRadius: '0px',
-  }
-}
-
 class Navbar extends Component {
     render() {
-        const { classes, authenticated } = this.props
+        const { authenticated } = this.props
         return (
-            <AppBar className={classes.navBartheme}>
+            <AppBar className="navbar_theme">
                  <div className="appBar" >
                         {authenticated ? (
-                            <Grid container spacing={1}>
-                                <Grid item xs={12} sm={8}>
-                                        <PostPost />
+                            <Grid container spacing={1} className="navbar_template">
+                                <Grid className="navbar_logo">
+                                    <Link to="/">
+                                        <h2>MediaS</h2>
+                                    </Link> 
                                 </Grid>
                                 <Grid item xs={12} sm={4}>
                                      <div className='navButtons'>
-                                        <button title='DO NOT CLICK!' className='uselessButton'>
-                                              <i class="fa fa-bomb" aria-hidden="true"></i>
-                                        </button>
+                                        <PostButton />
                                         <Link to="/">
-                                          <button className='homeButton' title='Home'>
+                                          <button className='navbar_button' title='Home'>
                                              <i class="fa fa-home" aria-hidden="true"></i>
                                           </button>
                                         </Link>     
-                                         <Notifications />
+                                        <Notifications />
                                      </div>
                                  </Grid> 
                             </Grid>
@@ -60,26 +40,35 @@ class Navbar extends Component {
                             
                                 
                         ) : (          
-                        <div className='noUserNav'>
-                                <Link to="/login">
-                                <button className='loginButton' title='Login'>
-                                    <i class="fa fa-sign-in" aria-hidden="true"></i>
-                                </button>
-                                </Link>     
-                              <Link to="/">
-                                  <button className='homeButton' title='Home'>
-                                     <i class="fa fa-home" aria-hidden="true"></i>
-                                 </button>
-                                </Link> 
-                              <Link to="/signup">
-                                <button className='signupButton' title='Sign up'>
-                                    <i class="fa fa-user-plus" aria-hidden="true"></i>
-                                 </button>
-                                </Link>     
-                        </div> 
+                            <Grid container spacing={1} className="navbar_template">
+                                <Grid>
+                                    <Link to="/">
+                                        <h2>MediaS</h2>
+                                    </Link> 
+                                </Grid>
+                                <Grid item xs={12} sm={4}>
+                                     <div className='navButtons'>
+                                        <Link to="/login">
+                                            <button className='navbar_button' title='Login'>
+                                                <i class="fa fa-sign-in" aria-hidden="true"></i>
+                                            </button>
+                                        </Link> 
+                                        <Link to="/">
+                                          <button className='navbar_button' title='Home'>
+                                             <i class="fa fa-home" aria-hidden="true"></i>
+                                          </button>
+                                        </Link>     
+                                        <Link to="/signup">
+                                            <button className='navbar_button' title='Sign up'>
+                                                <i class="fa fa-user-plus" aria-hidden="true"></i>
+                                            </button>
+                                        </Link> 
+                                     </div>
+                                 </Grid> 
+                            </Grid>  
                         )}
                     
-                </div>
+                    </div>
                 </AppBar>
         )
     }
@@ -93,4 +82,4 @@ const mapStateToProps = state => ({
     authenticated: state.user.authenticated
 })
 
-export default connect(mapStateToProps)(withStyles(styles)(Navbar));
+export default connect(mapStateToProps)(Navbar);

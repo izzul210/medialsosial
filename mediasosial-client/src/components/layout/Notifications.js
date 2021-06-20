@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom/';
 import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';
 import PropTypes from 'prop-types';
-import './Notifications.css';
+import './Notifications.scss';
 
 //MUI stuff
 import Menu from '@material-ui/core/Menu';
@@ -54,19 +54,19 @@ class Notifications extends Component {
                 notificationsIcon = (
                     <Badge badgeContent={notifications.filter(not => not.read === false).length}
                            color="red">
-                               <button className='notiButton'>
+                               <button className='navbar_button'>
                                  <i class="fa fa-bell" aria-hidden="true"></i>
                                 </button>
 
                     </Badge>
                 )
             ) : (
-                notificationsIcon = <button className='notiButton'>
+                notificationsIcon = <button className='navbar_button'>
                                          <i class="fa fa-bell" aria-hidden="true"></i>
                                      </button>
             )
         } else {
-            notificationsIcon = <button className='notiButton'>
+            notificationsIcon = <button className='navbar_button'>
                                     <i class="fa fa-bell" aria-hidden="true"></i>
                                  </button>
         }
@@ -108,7 +108,7 @@ class Notifications extends Component {
                     <IconButton aria-owns={anchorEl ? 'simple-menu' : undefined}
                                 aria-haspopup = "true"
                                 onClick={this.handleOpen}
-                                >
+                                className="notification_button">
                             {notificationsIcon}
                     </IconButton>
                 <Menu  

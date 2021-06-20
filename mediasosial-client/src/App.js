@@ -58,7 +58,7 @@ class App extends Component {
   render(){
     const { authenticated } = this.props
   return (
-    <MuiThemeProvider theme={theme}>
+    <MuiThemeProvider >
       <Provider store={store}>
         <Router >
           <Navbar />

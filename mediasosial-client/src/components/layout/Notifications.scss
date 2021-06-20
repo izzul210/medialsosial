@@ -1,0 +1,13 @@
+.Notif{
+    height: 50px;
+    width: 50px;
+}
+
+.notification_button{
+    padding: 0px !important;
+
+    &:hover{
+        background: none !important;
+    }
+
+}
