@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types';
-import MyButton from '../../util/MyButton';
-import './EditDetails.css';
+import './EditDetails.scss';
 
 //Redux
 import { connect } from 'react-redux';

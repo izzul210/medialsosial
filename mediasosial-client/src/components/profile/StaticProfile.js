@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import withStyles from '@material-ui/core/styles/withStyles';
 import dayjs from 'dayjs';
 import { Link } from 'react-router-dom';
-import './Profile.css'
+import './Profile.scss'
 
 //MUI
 import MuiLink from '@material-ui/core/Link';

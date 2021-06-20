@@ -1,11 +1,10 @@
 import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types';
-import withStyles from '@material-ui/core/styles/withStyles';
 import { Link } from 'react-router-dom';
 import dayjs from 'dayjs';
 import EditDetails from './EditDetails';
 import MyButton from '../../util/MyButton';
-import './Profile.css';
+import './Profile.scss';
 import Loading from '../../pages/loading';
 
 
@@ -17,76 +16,6 @@ import {logoutUser, uploadImage } from '../../redux/actions/userAction';
 import MuiLink from '@material-ui/core/Link';
 import Typography  from '@material-ui/core/Typography';
 import Card from '@material-ui/core/Card';
-
-//Icons 
-import KeyboardReturn from '@material-ui/icons/KeyboardReturn';
-
-const styles = {
-  card: {
-    position: 'constant',
-    background: '#eff4f5',
-    marginBottom: '20px',
-    borderRadius: '30px',
-    boxShadow: '4px 4px 10px #cdced1, -4px -4px 4.5px #ffffff',
-    padding: '30px 5px 5px 5px',
-    margin: 'auto auto', 
-  },
-  nonUserCard: {
-    position: 'constant',
-    background: '#eff4f5',
-    marginBottom: '20px',
-    borderRadius: '30px',
-    boxShadow: '4px 4px 10px #cdced1, -4px -4px 4.5px #ffffff',
-    padding: '30px 5px 5px 5px',
-    margin: 'auto auto', 
-  },
-  fontButton:{
-    letterSpacing:'1px',
-    color: 'rgba(36, 35, 34, 0.8)',
-  },
-  profile: {
-    '& .image-wrapper': {
-          textAlign: 'center',
-          position: 'relative',
-    '& button': {
-          position: 'absolute',
-          top: '80%',
-          left: '70%'
-          }
-        },
-    '& .profile-image': {
-          width: 200,
-          height: 200,
-          objectFit: 'cover',
-          maxWidth: '100%',
-          borderRadius: '50%'
-        },
-    '& .profile-details': {
-          textAlign: 'center',
-          '& span, svg': {
-            verticalAlign: 'middle'
-          },
-      '& a': {
-            color: 'blue'
-          }
-        },
-        '& hr': {
-          border: 'none',
-          margin: '0 0 10px 0'
-        },
-        '& svg.button': {
-          '&:hover': {
-            cursor: 'pointer'
-          }
-        }
-      },
-      buttons: {
-        textAlign: 'center',
-        '& a': {
-          margin: '20px 10px'
-        }
-      }
-}
 
 class Profile extends Component {
   handleImageChange = (event) => {
@@ -108,7 +37,6 @@ class Profile extends Component {
 
     render() {
         const { 
-            classes, 
             user: {
                 credentials: {handle, createdAt, imageUrl, bio, website, location},
                 loading,
@@ -118,8 +46,8 @@ class Profile extends Component {
         
         let profileMarkUp = !loading ? (authenticated ? (
           
-              <Card className={classes.card}>
-                <div className={classes.profile}>
+              <Card className='card'>
+                <div className='profile'>
                     <div  className="image-wrapper">
                         <img src={imageUrl} className='profile-pic' alt=''/>
                         <input 
@@ -132,51 +60,53 @@ class Profile extends Component {
                                <i class="fa fa-camera" aria-hidden="true"></i>
                           </button>
                     </div>
-                    <hr/>
+
                     <div className="profile-details">
-                    <MuiLink component={Link} to={`/users/${handle}`} color="secondary" variant="h5">
-                        @{handle}
-                    </MuiLink>
-                    <hr/>
-                    {bio && <Typography variant="body2">{bio}</Typography>}
-                    <hr/>
-                    {location && (
-                       <Fragment>
-                           <div className="locationInfo"/> <span className="info">{location}</span>
-                        <hr/>
-                       </Fragment> 
-                    )}
-                    {website && (
+                      <MuiLink component={Link} to={`/users/${handle}`} color="secondary" variant="h5">
+                          @{handle}
+                      </MuiLink>
+                      <hr/>
+                      {bio && <Typography variant="body2">{bio}</Typography>}
+                      {location && (
                         <Fragment>
-                            <div className="websiteInfo"/>
-                            <a href={website} target="_blank" rel="noopener noreferrer">
-                                {' '}{website}
-                            </a>
-                            <hr/>
-                        </Fragment>
-                    )}
-                    <div>
-                      <div className="calendarInfo"/>{' '}
-                      <span>Joined {dayjs(createdAt).format('MMM YYYY')}</span>
+                            <div className="locationInfo"/> 
+                            <span className="info">{location}</span>
+                          <hr/>
+                        </Fragment> 
+                      )}
+                      {website && (
+                          <Fragment>
+                              <div className="websiteInfo"/>
+                              <a href={website} target="_blank" rel="noopener noreferrer">
+                                  {' '}{website}
+                              </a>
+                              <hr/>
+                          </Fragment>
+                      )}
+                        {/* <div className="calendarInfo"/>{' '}
+                        <span>Joined {dayjs(createdAt).format('MMM YYYY')}</span> */}
                     </div>
-                    </div>
+
+                    <div className='profile_buttons'>
                       <button className="logout" title='Log out' onClick={this.handleLogout}>
-                         <i class="fa fa-sign-out" aria-hidden="true"></i>
-                       </button>
-                    <EditDetails />
+                        <i class="fa fa-sign-out" aria-hidden="true"></i>
+                      </button>
+                      <EditDetails />
+                    </div>
+              
                 </div>
               </Card>
             
             ):(
-              <Card className={classes.nonUserCard}>
+              <Card className='nonUserCard'>
                     <Typography variant="body2" align="center">
                         No profile found. Shame. 
                     </Typography>
-                    <div className={classes.buttons}>
+                    <div className='buttons'>
                     <MyButton tip=''>
                         <Link to="/login">
                           <button className='nonprofile-login'>
-                          <Typography variant="body2" align="center" className={classes.fontButton}>
+                          <Typography variant="body2" align="center" className='fontButton'>
                             Login 
                           </Typography>
                           </button>
@@ -185,7 +115,7 @@ class Profile extends Component {
                     <MyButton tip=''>
                         <Link to="/signup">
                             <button className='nonprofile-signup'>
-                            <Typography variant="body2" align="center" className={classes.fontButton}>
+                            <Typography variant="body2" align="center" className='fontButton'>
                               Sign Up
                           </Typography>
                             </button>
@@ -217,7 +147,7 @@ Profile.propTypes = {
     classes: PropTypes.object.isRequired
 }
 
-export default connect(mapStateToProps, mapActionsToProps)(withStyles(styles)(Profile))
+export default connect(mapStateToProps, mapActionsToProps)(Profile);
 
 //INCASE IF YOU NEED TO LOGOUT
 /*
