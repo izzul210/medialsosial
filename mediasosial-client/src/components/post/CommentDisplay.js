@@ -3,27 +3,13 @@ import PropTypes from 'prop-types';
 import withStyles from '@material-ui/core/styles/withStyles';
 import {Link} from 'react-router-dom';
 import dayjs from 'dayjs';
-import './CommentDisplay.css';
+import './CommentDisplay.scss';
 
 //MUI stuff
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 
 const styles = {
-    invisibleSeparator:{
-        border: 'none',
-        marginBottom: 5,
-        marginRight: 8,
-        marginTop: 5,
-    },
-    commentImage:{
-        marginLeft: 10,
-        width: 35,
-        height: 35,
-        borderRadius: '50%',
-        objectFit: 'cover',
-        boxShadow: '-3px -3px 2px rgba(255,255,255,0.5), 3px 3px 7px rgba(70,70,70,0.12),inset -5px -5px 2px rgba(255,255,255,0.5),inset  5px 5px 10px rgba(70,70,70,0.12)',
-    },
     commentData:{
         marginLeft: 20
     },
@@ -45,11 +31,11 @@ class CommentDisplay extends Component{
                     return(
                        <div className="expandComment">
                         <Fragment key={createdAt}>
-                                    <div className='commentImage'>
+                                    <div className='commentImage_div'>
                                         <img 
                                             src={userImage} 
                                             alt="comment" 
-                                            className={classes.commentImage}/>
+                                        />
                                     </div>
                                     <div className='commentDetails'>
                                         <div className={classes.commentData}>
@@ -68,7 +54,7 @@ class CommentDisplay extends Component{
                                                 className={classes.fontStuff}>
                                                 {dayjs(createdAt).format('h:mm a, MMMM DD')}
                                             </Typography>
-                                            <hr className={classes.invisibleSeparator}/>
+                                            <hr className='invisibleSeparator'/>
                                             <Typography variant="body1" className={classes.fontStuff}>
                                                 {body}
                                             </Typography>

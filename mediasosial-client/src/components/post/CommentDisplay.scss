@@ -1,0 +1,33 @@
+.expandComment{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+    display: flex;
+    border: 1px solid rgba(79, 79, 79, 0.235);
+    border-radius: 30px;
+    padding: 15px;
+    margin: 0px 20px 10px 20px;
+}
+
+.commentImage_div{
+    display: inline-block;
+
+    img{
+        width: 40px;
+        height: 40px;
+        border-radius: 15px;
+        border: 1px solid rgba(0, 0, 0, 0.289);
+        object-fit: cover;
+    }
+}
+
+.commentDetails{
+    display: inline-block;
+}
+
+.invisibleSeparator{
+    border: none;
+    margin-bottom: 5px;
+    margin-right: 8px;
+    margin-top: 5px;
+}

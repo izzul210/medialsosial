@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types';
 import CommentDisplay from './CommentDisplay';
-import LoadingComment from './LoadingComment';
-
 //Redux stuff
 import {connect} from 'react-redux';
 
@@ -26,7 +24,6 @@ class CommentExpand extends Component{
             }    
             i++;
         }
-    
 
         return(
             <CommentDisplay comments={limitedComments}/>

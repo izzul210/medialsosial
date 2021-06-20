@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import withStyles from '@material-ui/core/styles/withStyles';
 import {Link} from 'react-router-dom/';
 import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';
@@ -18,25 +17,11 @@ import  Typography from '@material-ui/core/Typography';
 //Redux
 import { connect } from 'react-redux';
 
-const styles = {
-      content:{
-          marginLeft: '10px',
-          padding: '25px',
-          objectFit:'cover'
-      },
-      fontStuff:{
-          fontSize: 'calc(15px + (0.6) * ((100vw - 300px) / (1600 - 300)))',
-      },
-      fontTitle:{
-        fontSize: 'calc(22px + (0.6) * ((100vw - 300px) / (1600 - 300)))',
-    },
-}
 
 class Post extends Component {
     render() {
       dayjs.extend(relativeTime)
       const { 
-          classes, 
           post: {   body, 
                     createdAt, 
                     userImage, 
@@ -58,36 +43,48 @@ class Post extends Component {
 
         return (
             <Card className='card_div'>
-                <img src={userImage} className='postprofile-pic' alt=''/>
-                <CardContent className={classes.content}>
-                    <div>
-                    <Typography variant="h5" component={Link} to={`/users/${userHandle}`} className={classes.fontTitle}>
-                        {userHandle}
-                    </Typography>
-                    {deleteButton}
+                <div className="card_content">
+                    <div className="postprofile_div">
+                        <img src={userImage} className='postprofile-pic' alt=''/>
                     </div>
-                    <Typography variant="body2" color="textSecondary">
-                        {dayjs(createdAt).fromNow()}
-                    </Typography>
-                    <Typography variant="body1" className={classes.fontStuff}>
-                        {body}
-                    </Typography>
-                    <div className='commentNLike'>
+                    <CardContent className='content_div'>
+                        <div className="content_top">
+                            <div className="content_top_1">
+                                <Typography variant="h6" component={Link} to={`/users/${userHandle}`} className='font_title'>
+                                    {userHandle}
+                                </Typography>
+                                <Typography variant="body2" color="textSecondary">
+                                    {dayjs(createdAt).fromNow()}
+                                </Typography>
+                            </div>
+                            <div className="content_top_2">
+                                {deleteButton}
+                            </div>
+                        </div>
+                        <Typography variant="body1" className='font_div'>
+                            {body}
+                        </Typography>
+                        <br/>
+                    </CardContent>
+                </div>
+                <CommentExpand postId={postId} userHandle={userHandle} commentCount={commentCount}/>
+                <div className='buttons_div'>
+                    <PostDialog postId={postId} userHandle={userHandle} openDialog={this.props.openDialog}/>
+                    <div className="comment_like">
                         <div className='likeB'>
                             <LikeButton postId={postId}/>
                             <span>{likeCount}</span>
                         </div> 
                         <div className='commentB'>
                             <button className='commentBox'>
-                             <i class="fa fa-comments-o" aria-hidden="true"></i>
+                                <i class="fa fa-comments-o" aria-hidden="true"></i>
                             </button>
                             <span>{commentCount}</span>
                         </div>
-                    </div> 
-                    <br/>
-                    <CommentExpand postId={postId} userHandle={userHandle} commentCount={commentCount}/>
-                    <PostDialog postId={postId} userHandle={userHandle} openDialog={this.props.openDialog}/>
-                </CardContent>
+                    </div>
+                    
+                </div> 
+                
             </Card>
         )
     }
@@ -107,5 +104,5 @@ const mapStateToProps = state => ({
     data: state.data,
 })
 
-export default connect(mapStateToProps)(withStyles(styles)(Post));
+export default connect(mapStateToProps)(Post);
 
