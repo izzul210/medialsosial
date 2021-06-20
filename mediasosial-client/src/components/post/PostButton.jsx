@@ -73,7 +73,7 @@ class PostButton extends Component{
         const{classes, UI:{loading}}= this.props;
         return(
             <Fragment>
-                <div className='navPost'>
+                <div >
                     <button onClick={this.handleOpen} className='navbar_button'>
                         <i class="fa fa-plus" aria-hidden="true"></i>
                     </button>                 

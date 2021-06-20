@@ -94,10 +94,7 @@ class PostPost extends Component{
                                 <i class="fa fa-reply" aria-hidden="true"></i>
                                 </button>
                             </form> 
-                        </div>        
-                        <button onClick={this.handleOpen} className='longpostButton'>
-                              <i class="fa fa-plus" aria-hidden="true"></i>
-                        </button>                 
+                        </div>                       
                       </div>
                     </div>
                 <Dialog 

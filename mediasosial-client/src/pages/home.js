@@ -6,6 +6,7 @@ import './home.css';
 import Post from '../components/post/Post';
 import Profile from '../components/profile/Profile';
 import Loading from './loading';
+import PostPost from '../components/post/PostPost';
 
 import {connect} from 'react-redux';
 import {getPosts, transComment} from '../redux/actions/dataAction';
@@ -29,6 +30,7 @@ export class home extends Component {
             <div className={authenticated ? "userPresent" : " " } >
               <Grid container spacing ={4} >
                 <Grid item sm={8} xs={12} className="post_background">
+                    <PostPost />
                    {recentPostsMarkup}
                 </Grid>
                 <Grid item sm={4} xs={12}>

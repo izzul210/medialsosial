@@ -52,3 +52,12 @@
     box-shadow: inset 2px 2px 5px #cdced1, 
                  inset -5px -5px 10px #ffffff;
 } 
+
+.card_div{
+    position: relative;
+    background: #eff4f5;
+    display: flex;
+    margin-bottom: 20px;
+    border-radius: 50px;
+    box-shadow: 0px 4px 10px #cdced1;
+}

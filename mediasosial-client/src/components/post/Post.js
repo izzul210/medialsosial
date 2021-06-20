@@ -8,7 +8,7 @@ import DeletePost from './DeletePost';
 import PostDialog from './PostDialog';
 import LikeButton from './LikeButton';
 import CommentExpand from './CommentExpand';
-import './Post.css';
+import './Post.scss';
 
 //MUI Stuff
 import Card from '@material-ui/core/Card';
@@ -19,14 +19,6 @@ import  Typography from '@material-ui/core/Typography';
 import { connect } from 'react-redux';
 
 const styles = {
-    card: {
-        position: 'relative',
-        background: '#eff4f5',
-        display: 'flex',
-        marginBottom: '20px',
-        borderRadius: '30px',
-        boxShadow: '4px 4px 10px #cdced1, -4px -4px 4.5px #ffffff'
-      },
       content:{
           marginLeft: '10px',
           padding: '25px',
@@ -65,7 +57,7 @@ class Post extends Component {
         ) : null
 
         return (
-            <Card className={classes.card}>
+            <Card className='card_div'>
                 <img src={userImage} className='postprofile-pic' alt=''/>
                 <CardContent className={classes.content}>
                     <div>
