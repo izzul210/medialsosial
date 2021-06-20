@@ -7,6 +7,7 @@ import Post from '../components/post/Post';
 import Profile from '../components/profile/Profile';
 import Loading from './loading';
 import PostPost from '../components/post/PostPost';
+import Advertisement from '../components/layout/Advertisement';
 
 import {connect} from 'react-redux';
 import {getPosts, transComment} from '../redux/actions/dataAction';
@@ -37,7 +38,7 @@ export class home extends Component {
                    {recentPostsMarkup}
                 </Grid>
                 <Grid item sm={3} xs={12}>
-                    <Profile />
+                    <Advertisement />
                 </Grid>
                 
              </Grid> 
