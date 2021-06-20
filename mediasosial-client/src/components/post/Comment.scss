@@ -1,0 +1,22 @@
+.commentImage{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    margin-top: 3px;
+    margin-left: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.227);
+}
+
+.commentData{
+    margin-left: 20px;
+}
+
+.comment_div{
+    border: 1px solid rgba(0, 0, 0, 0.165);
+    margin-bottom: 10px !important;
+    border-radius: 30px;
+    padding: 10px;
+    width: 100%;
+}

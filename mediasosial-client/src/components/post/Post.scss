@@ -1,3 +1,17 @@
+.MuiIconButton-root {
+    &:hover{
+        background: none !important;
+    }
+}
+
+.MuiCardContent-root:last-child {
+    padding-bottom: 0px !important;
+}
+
+.MuiDialog-paperFullWidth{
+    border-radius: 40px !important;
+}
+
 .card_div{
     background: #eff4f5;
     display: flex;

@@ -67,7 +67,9 @@ class Post extends Component {
                         <br/>
                     </CardContent>
                 </div>
+
                 <CommentExpand postId={postId} userHandle={userHandle} commentCount={commentCount}/>
+                
                 <div className='buttons_div'>
                     <PostDialog postId={postId} userHandle={userHandle} openDialog={this.props.openDialog}/>
                     <div className="comment_like">

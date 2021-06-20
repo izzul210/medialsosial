@@ -1,0 +1,85 @@
+.expand_div{
+    display: flex;
+    flex-direction: column;
+
+    .expand_content{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 20px 10px;
+        border: 1px solid rgba(0, 0, 0, 0.179);
+        padding: 10px !important;
+        border-radius: 25px;
+    }
+
+    .profile_img{
+        padding: 1rem;
+
+        img{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 1px solid rgba(0, 0, 0, 0.124);
+            margin-right: 1rem;
+        }
+    }
+
+    .expand_post{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .comment_like{
+        font-size: 12px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        margin-right: 10px;
+
+        span{
+            font-weight: 700;
+        }
+
+        .like{
+            display: inline-block;
+            margin: 0px 10px;
+        }
+
+        .comment{
+            display: inline-block;
+            margin: 0px 10px;
+        }
+
+     }
+}
+
+
+ .dialogContent{
+     padding: 10px;
+ }
+
+ .spinnerButton{
+     text-align: center;
+     margin-top: 30px;
+     margin-bottom: 30px;
+ }
+
+.unfoldButton{
+    font-size: 1px;
+}
+
+.commentSection{
+    font-size: 18px;
+    color: rgb(97,74,74);
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+.viewmore{
+    font-size: 13px !important;
+}

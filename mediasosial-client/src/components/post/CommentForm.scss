@@ -2,7 +2,18 @@
     padding: 1px 0px 1px 0px;
     text-align: left;
     display:flex;
-    margin-left: 15px;
+    margin: 10px;
+    width: 100% !important;
+
+    .commentField2{
+        width: 100%;
+    }
+
+    .comment_form{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
 }
 
 .commentField input{
@@ -13,9 +24,8 @@
     font-size: 18px;
     color: #555;
     border-radius: 25px;
-    width: 85%;
+    width: 75%;
     padding-left: 9px;
-    padding-right: 9%;
     padding-top: 10px;
     padding-bottom: 10px;
     position: relative;
@@ -26,16 +36,24 @@
 .commentField button{
     outline:none;
     position: relative;
-    left: 83%;
-    transform: translateY(-125%);
     background: rgb(207, 253, 228);
     border: none;
-    width: 12%;
-    height: 28px;
-    border-radius: 25px;
+    width: 3rem;
+    height: 30px;
+    border-radius: 20px;
+    margin-left: 15px;
+
+    &:hover{
     box-shadow: 1px 1px 4px #cdced1, 
                 -2px -2px 5px #ffffff;
 
+    }
+
+    &:active{
+        box-shadow: inset 1px 1px 6px #cdced1, 
+        inset -2px -2px 5px #ffffff;
+    }
+    
 }
 
 .commentField img{
@@ -53,20 +71,9 @@
 
 } 
 
-.commentField button:hover i{
-    color: rgb(255, 140, 140);
-}
-
 .commentField i{
     color: rgb(96, 146, 84);
     size: 100px;
-}
-
-.commentField button:hover{
-    box-shadow: inset 1px 1px 6px #cdced1, 
-                inset -2px -2px 5px #ffffff;
-    
-
 }
 
 .profileCommentPic img{
@@ -83,3 +90,30 @@
                 -2px -2px 5px #ffffff;
 }
 
+.profileImage{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profileCommentImage{
+    left: 2%;
+    position: relative;
+    transform: translateY(110%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid black;
+}
+
+.dialogContent{
+    padding: 10px;
+}
+
+.spinnerButton{
+    text-align: left;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
