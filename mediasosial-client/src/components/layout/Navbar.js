@@ -2,9 +2,9 @@ import React, { Component, Fragment } from 'react';
 import {Link} from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import MyButton from '../../util/MyButton';
 import PostButton from '../post/PostButton';
 import Notifications from './Notifications';
+import ProfileIcon from '../profile/ProfileIcon';
 import './Navbar.scss';
 
 //MUI stuff
@@ -21,18 +21,21 @@ class Navbar extends Component {
                             <Grid container spacing={1} className="navbar_template">
                                 <Grid className="navbar_logo">
                                     <Link to="/">
-                                        <h2>MediaS</h2>
+                                        <h2>MediaSosial</h2>
                                     </Link> 
                                 </Grid>
                                 <Grid item xs={12} sm={4}>
-                                     <div className='navButtons'>
-                                        <PostButton />
-                                        <Link to="/">
-                                          <button className='navbar_button' title='Home'>
-                                             <i class="fa fa-home" aria-hidden="true"></i>
-                                          </button>
-                                        </Link>     
-                                        <Notifications />
+                                     <div className='navbar_bar'>
+                                         <div className='navButtons'>
+                                            <PostButton />
+                                            <Link to="/">
+                                            <button className='navbar_button' title='Home'>
+                                                <i class="fa fa-home" aria-hidden="true"></i>
+                                            </button>
+                                            </Link>     
+                                            <Notifications />
+                                         </div>
+                                        <ProfileIcon />
                                      </div>
                                  </Grid> 
                             </Grid>
@@ -43,7 +46,7 @@ class Navbar extends Component {
                             <Grid container spacing={1} className="navbar_template">
                                 <Grid>
                                     <Link to="/">
-                                        <h2>MediaS</h2>
+                                        <h2>MediaSosial</h2>
                                     </Link> 
                                 </Grid>
                                 <Grid item xs={12} sm={4}>

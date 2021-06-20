@@ -38,6 +38,13 @@
     
   }
 
+.navbar_bar{
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .navButtons{
   text-align: center;
   display: flex;
@@ -68,7 +75,7 @@
   -webkit-appearance: none;
   display: inline-flex;
   justify-content: center;
-  margin: 5px 25px 5px 25px;
+  margin: 5px 18px;
   outline: none;
   position: relative;
   border-radius: 50%;
@@ -79,11 +86,10 @@
   align-items: center;
   flex: 1;
   background-color:inherit;
-
+  transition: all .1s ease-in-out;
   &:hover{
     box-shadow:
-    -5px -5px 7px rgba(255,255,255,0.5),
-    5px 5px 10px rgba(70,70,70,0.12);
+    2px 3px 15px rgba(97, 97, 97, 0.528);
   }
   &:active{
     box-shadow:
