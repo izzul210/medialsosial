@@ -103,24 +103,24 @@ class Profile extends Component {
                         No profile found. Shame. 
                     </Typography>
                     <div className='buttons'>
-                    <MyButton tip=''>
-                        <Link to="/login">
-                          <button className='nonprofile-login'>
-                          <Typography variant="body2" align="center" className='fontButton'>
-                            Login 
-                          </Typography>
-                          </button>
-                        </Link>     
-                    </MyButton>
-                    <MyButton tip=''>
-                        <Link to="/signup">
-                            <button className='nonprofile-signup'>
+                      <MyButton tip=''>
+                          <Link to="/login">
+                            <button className='nonprofile-login'>
                             <Typography variant="body2" align="center" className='fontButton'>
-                              Sign Up
-                          </Typography>
+                              Login 
+                            </Typography>
                             </button>
-                       </Link>     
-                    </MyButton>
+                          </Link>     
+                      </MyButton>
+                      <MyButton tip=''>
+                          <Link to="/signup">
+                              <button className='nonprofile-signup'>
+                              <Typography variant="body2" align="center" className='fontButton'>
+                                Sign Up
+                            </Typography>
+                              </button>
+                        </Link>     
+                      </MyButton>
                     </div>
                 </Card>
             )): 
