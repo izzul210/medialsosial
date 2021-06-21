@@ -65,7 +65,9 @@ class PostPost extends Component{
     }
     handleSubmit = (event) => {
         event.preventDefault();
-        this.props.postPost({body: this.state.body});
+        let postBody = {body: this.state.body, tags:["test1", "test2"]};
+
+        this.props.postPost({body: postBody});
      }
 
     render(){

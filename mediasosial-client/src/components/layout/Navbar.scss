@@ -102,6 +102,11 @@
 
 .navbar_logo{
   margin-left: 1rem;
+
+  @media screen and (max-width: 640px){
+    display: none;
+
+}
 }
 
 

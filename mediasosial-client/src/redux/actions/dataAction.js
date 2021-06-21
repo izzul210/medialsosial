@@ -16,6 +16,7 @@ import { SET_POSTS,
          DELETE_COMMENTS,
          } from '../types';
 import axios from 'axios';
+import { ContactlessOutlined } from '@material-ui/icons';
 
 //Get all Posts
 export const getPosts = () => (dispatch) => {
@@ -79,7 +80,7 @@ export const showComment = (postId) => (dispatch) => {
 //Post a post
 export const postPost = (newPost) => (dispatch) => {
     dispatch({type: LOADING_UI});
-    axios.post('/post', newPost)
+    axios.post('/post', newPost.body)
          .then(res => {
              dispatch({
                  type: POST_POST,

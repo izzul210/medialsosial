@@ -38,7 +38,7 @@ class Profile extends Component {
     render() {
         const { 
             user: {
-                credentials: {handle, createdAt, imageUrl, bio, website, location},
+                credentials: {handle, imageUrl, bio, website, location},
                 loading,
                 authenticated
             }

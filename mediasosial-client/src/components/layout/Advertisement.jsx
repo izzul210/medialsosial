@@ -1,11 +1,8 @@
 import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
-import MyButton from '../../util/MyButton';
 import './Advertisement.scss';
 import Loading from '../../pages/loading';
 import adsImg from '../../images/ads.jpg';
-
 
 //Redux stuff
 import { connect } from 'react-redux';

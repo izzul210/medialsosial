@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import './App.css';
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
-import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
 import jwtDecode from 'jwt-decode';
 import axios from 'axios';
 
@@ -22,20 +21,6 @@ import home from './pages/home';
 import login from './pages/login';
 import signup from './pages/signup';
 import user from './pages/user';
-
-const theme = createMuiTheme({
-  palette: {
-    primary: {
-      main: '#eceff1',
-    },
-    secondary: {
-      main: '#004d40',
-    },
-  },
-  typography: {
-    userNextVariants: true
-  }
-});
 
 axios.defaults.baseURL =
  'https://us-central1-mediasosial-18580.cloudfunctions.net/api';

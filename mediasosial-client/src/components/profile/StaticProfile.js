@@ -14,10 +14,10 @@ import Card from '@material-ui/core/Card';
 const styles = {
   card: {
     position: 'constant',
-    background: '#eff4f5',
+    background: 'white',
     marginBottom: '20px',
-    borderRadius: '30px',
-    boxShadow: '4px 4px 10px #cdced1, -4px -4px 4.5px #ffffff',
+    borderRadius: '40px',
+    boxShadow: '0px 5px 15px #cdced1',
     padding: '30px 5px 45px 5px',
     margin: 'auto auto',
   },

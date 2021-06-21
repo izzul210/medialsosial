@@ -217,32 +217,45 @@
     margin-right: 13px;
     margin-top: 10px;
     outline: none;
-    box-shadow:
-    -8px -8px 8px rgba(255,255,255,0.5),
-    4px 4px 4px rgba(70,70,70,0.12);
     position: relative;
-    border-radius: 10%;
+    border-radius: 20px;
     outline: none;
     align-items: center;
     flex: 1;
-    border: none;
-    background-color: none;
+    border: 1px solid rgba(0, 0, 0, 0.289);
+    padding: 10px !important;
+    &:hover{
+        box-shadow:
+        0px 5px 15px rgba(70,70,70,0.12);
+    }
+
+    &:active{
+        box-shadow:
+        inset -2px -2px 2px rgba(255,255,255,0.5),
+        inset  5px 5px 10px rgba(70,70,70,0.12);
+    }
+}
+
+.nonprofile-login{
+    background: rgb(255, 255, 248);
 }
 
 .nonprofile-signup{
-    background-color: rgb(207, 253, 228);
+    background: rgba(12, 77, 12, 0.501);
+
+    .fontButton{
+        color: white;
+    }
 }
 
-.nonprofile-login:hover
-{
-    box-shadow:
-    inset -2px -2px 2px rgba(255,255,255,0.5),
-    inset  5px 5px 10px rgba(70,70,70,0.12);
-
-}
-
-.nonprofile-signup:hover{
-    box-shadow:
-    inset -2px -2px 2px rgba(255, 255, 255, 0.5),
-    inset  5px 5px 10px rgba(70,70,70,0.12);
+.nonUserCard{
+    padding-top: 1rem;
+    
+    .MuiIconButton-root{
+        padding: 10px !important;
+    }
+    .buttons{
+        display: flex;
+        flex-direction: row;
+    }
 }

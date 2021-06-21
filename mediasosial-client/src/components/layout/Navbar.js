@@ -44,7 +44,7 @@ class Navbar extends Component {
                                 
                         ) : (          
                             <Grid container spacing={1} className="navbar_template">
-                                <Grid>
+                                <Grid className="navbar_logo">
                                     <Link to="/">
                                         <h2>MediaSosial</h2>
                                     </Link> 

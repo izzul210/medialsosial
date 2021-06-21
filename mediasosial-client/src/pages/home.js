@@ -34,7 +34,7 @@ export class home extends Component {
                     <Profile />
                 </Grid>
                 <Grid item sm={6} xs={12} className="post_background">
-                    <PostPost />
+                   {authenticated && <PostPost />}
                    {recentPostsMarkup}
                 </Grid>
                 <Grid item sm={3} xs={12}>
